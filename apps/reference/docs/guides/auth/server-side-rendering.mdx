@@ -171,14 +171,14 @@ is to get the user's details with `getUser()`.
 
 ### What should I use for the `SameSite` property?
 
-Make sure you [understand the behavior of the parameter in different
-situations](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite),
-as your users can be experiencing a degraded user experience.
+Make sure you [understand the behavior of the property in different
+situations](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
+as some properties can degrade the user experience.
 
-A good default is to use `Lax` which will send cookies when users are
+A good default is to use `Lax` which sends cookies when users are
 navigating to your site. Cookies typically require the `Secure` attribute,
-which will only send them over HTTPS. However, this can sometimes be a problem
-when developing on `localhost`.
+which only sends them over HTTPS. However, this can be a problem when
+developing on `localhost`.
 
 ### Can I use server-side rendering with a CDN or cache?
 
