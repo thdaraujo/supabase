@@ -63,7 +63,6 @@ const PAYGUsage: FC<Props> = ({ paygStats, dateRange }) => {
                       startDate={startDate}
                       endDate={endDate}
                       interval="1d"
-                      highlight="maximum"
                       defaultChartStyle="bar"
                       customDateFormat={'MMM D, YYYY'}
                     />
