@@ -240,6 +240,12 @@ export const SQL_FILTER_TEMPLATES: any = {
   storage_logs: {
     ..._SQL_FILTER_COMMON,
   },
+  postgrest_logs: {
+    ..._SQL_FILTER_COMMON,
+  },
+  pgbouncer_logs: {
+    ..._SQL_FILTER_COMMON,
+  }
 }
 
 export enum LogsTableName {
@@ -250,6 +256,8 @@ export enum LogsTableName {
   AUTH = 'auth_logs',
   REALTIME = 'realtime_logs',
   STORAGE = 'storage_logs',
+  PGBOUNCER = "pgbouncer_logs",
+  POSTGREST = "postgrest_logs"
 }
 
 export const LOGS_TABLES = {
@@ -260,6 +268,8 @@ export const LOGS_TABLES = {
   auth: LogsTableName.AUTH,
   realtime: LogsTableName.REALTIME,
   storage: LogsTableName.STORAGE,
+  postgrest: LogsTableName.POSTGREST,
+  pgbouncer: LogsTableName.PGBOUNCER
 }
 
 export const LOGS_SOURCE_DESCRIPTION = {
@@ -270,6 +280,8 @@ export const LOGS_SOURCE_DESCRIPTION = {
   [LogsTableName.AUTH]: 'Authentication logs from GoTrue',
   [LogsTableName.REALTIME]: 'Realtime server for Postgres logical replication broadcasting',
   [LogsTableName.STORAGE]: 'Object storage logs',
+  [LogsTableName.PGBOUNCER]: 'Postgres connection pooler logs',
+  [LogsTableName.POSTGREST]: 'RESTful API web server logs',
 }
 
 export const genQueryParams = (params: { [k: string]: string }) => {
